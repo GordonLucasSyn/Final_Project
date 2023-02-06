@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02c42f2a-f0e4-46b0-ba2a-150cca48bc6a" name="Changes" comment="Initial commit" />
+    <list default="true" id="02c42f2a-f0e4-46b0-ba2a-150cca48bc6a" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Config.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Menu.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled6/CharacterCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled6/CharacterCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled6/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled6/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled6/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled6/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled6/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled6/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CharacterCreator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/CharacterCreator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Enemy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Enemy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,11 +54,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -66,25 +81,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -147,6 +163,7 @@
       <workItem from="1675685006448" duration="106000" />
       <workItem from="1675685141116" duration="3728000" />
       <workItem from="1675690208630" duration="876000" />
+      <workItem from="1675691137546" duration="4836000" />
     </task>
     <task id="LOCAL-00001" summary="Final Commit">
       <created>1675619076747</created>

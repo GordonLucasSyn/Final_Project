@@ -1,6 +1,6 @@
 // CharacterCreator.kt
 // Hauptdatei des Character Creators
-// Enthält das Programm und die Hauptfunktionalität
+// enthält das Programm und die Hauptfunktionalität
 
 import kotlin.random.Random
 
@@ -8,7 +8,7 @@ class CharacterCreator {
     private val player = Player()
     private val enemy = Enemy()
 
-    fun run() {
+    /*fun run() {
         // Willkommensnachricht anzeigen
         println("Willkommen beim Character Creator angelehnt an World of Warcraft!")
 
@@ -23,55 +23,50 @@ class CharacterCreator {
                 5 -> break
             }
         }
-    }
+    }*/
 
-    // Zeigt das interaktive Menü an
+    /*// Zeigt das interaktive Menü an
     private fun showMenu() {
         println("\nBitte wählen Sie eine Option aus:")
-        println("1 =Erstellen eines Characters")
-        println("2 =Erstellen eines Gegners")
-        println("3 =Zeige Details des Spielers und Gegners")
-        println("4 =Starte Kampf")
-        println("5 =Beenden")
-    }
+        println("1 = Erstellen eines Characters")
+        println("2 = Erstellen eines Gegners")
+        println("3 = Zeige Details des Spielers und Gegners")
+        println("4 = Starte Kampf")
+        println("5 = Beenden")
+    }*/
 
     // Liest die Option des Benutzers ein
-    private fun readOption(): Int {
+    fun readOption(): Int {
         print("Ihre Option: ")
         val input = readln()
         //Abfangen von Exceptions
-        try {
+        return try {
             input.toInt()
-            return input.toInt()
-        } catch (e: NumberFormatException) {
+            } catch (e: NumberFormatException) {
             println("Du hast eine Falsche eingabe gemacht,Versuche es Erneut")
             schlaf("Game")
-            return 0
+            0
         }
 
         //return input.toInt()
     }
 
     // Erstellt den Spieler
-    private fun createPlayer() {
+    fun createPlayer() {
         //Eingabe des Spieler namen
         player.name = readName()
-        //player.hp = Random.nextInt(100, 2000)
-        //player.strength = Random.nextInt(200, 250)
-        //player.defense = Random.nextInt(10, 200)
+
     }
 
     // Erstellt den Gegner
-    private fun createEnemy() {
+    fun createEnemy() {
         //Generierter Gegner name
         enemy.name = generateName()
-        //enemy.hp = Random.nextInt(100, 2000)
-        //enemy.strength = Random.nextInt(500, 1000)
-        //enemy.defense = Random.nextInt(150, 200)
+
     }
 
     // Zeigt die Details des Spielers und Gegners an
-    private fun showDetails() {
+    fun showDetails() {
         println("\nDetails des Spielers:")
         println("Name: ${player.name}")
         println("Lebensanzeige: ${player.hp}")
@@ -88,20 +83,20 @@ class CharacterCreator {
     }
 
     // Startet den Kampf zwischen Spieler und Gegner
-    private fun fight() {
+    fun fight() {
         println("\nRunde ${8-player.leben}")
         println("Der Kampf zwischen ${player.name} und ${enemy.name} beginnt!")
 
         while (player.hp > 0 && enemy.hp > 0) {
-            val damage = calculateDamage(player.strength, enemy.defense)
-            enemy.hp -= damage
+            val damagePlayer = calculateDamage(player.strength, enemy.defense)
+            enemy.hp -= damagePlayer
             schlaf("Game")
-            println("${player.name} hat ${enemy.name} $damage Schaden zugefügt!")
+            println("${player.name} hat ${enemy.name} $damagePlayer Schaden zugefügt!")
             if (enemy.hp > 0) {
-                val damage = calculateDamage(enemy.strength, player.defense)
-                player.hp -= damage
+                val damageEnemy = calculateDamage(enemy.strength, player.defense)
+                player.hp -= damageEnemy
                 schlaf("Game")
-                println("${enemy.name} hat ${player.name} $damage Schaden zugefügt!")
+                println("${enemy.name} hat ${player.name} $damageEnemy Schaden zugefügt!")
             }
         }
         if (player.hp > 0) {
@@ -127,7 +122,7 @@ class CharacterCreator {
     // Liest den Namen des Spielers ein
     private fun readName(): String {
         print("Bitte geben Sie den Namen des Characters ein: ")
-        return readLine() ?: ""
+        return readlnOrNull() ?: ""
     }
 
     // Generiert den Namen des Gegners
@@ -144,6 +139,17 @@ class CharacterCreator {
     // Berechnet den Schaden
     private fun calculateDamage(strength: Int, defense: Int): Int {
         return strength - defense
+    }
+
+    //Funktion Schlaf zum Delay Setzen
+    private fun schlaf(typ:String){
+        when (typ){
+            "Menu"-> Thread.sleep(1800)
+            "Game" -> Thread.sleep(1000)
+            "Continue" -> Thread.sleep(2400)
+
+
+        }
     }
 
 }
